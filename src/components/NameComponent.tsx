@@ -21,7 +21,7 @@ const NameComponent = () => {
       />
       <h3 className="text-3xl font-light mt-2">
         <TypeAnimation
-          sequence={[2000, "Interaktionsdesigner med passion för UX och kod!"]}
+          sequence={[1500, "Interaktionsdesigner med passion för UX och kod!"]}
           speed={40}
           wrapper="span"
           cursor={true}
