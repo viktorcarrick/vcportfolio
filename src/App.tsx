@@ -74,7 +74,20 @@ function App() {
             <h3 className="text-5xl text-white font-medium">Lite om mig!</h3>
             <p className="text-white font-light text-3xl"></p>
           </div>
-          <div className="border border-red-500 flex-grow"></div>
+          <div className="border border-red-500 flex-grow">
+            <h3 className="text-5xl text-white font-medium">Kunskaper</h3>
+            <div className="border border-white grid grid-cols-3 grid-rows-2 gap-4">
+              <div className="bg-white p-4 text-2xl text-bgblue flex-grow">
+                HTML
+              </div>
+              <div className="bg-white p-4 text-2xl text-bgblue flex-grow">
+                CSS
+              </div>
+              <div className="bg-white p-4 text-2xl text-bgblue flex-grow">
+                Tailwind CSS
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
