@@ -3,6 +3,22 @@ import { TypeAnimation } from "react-type-animation";
 import "./App.css";
 import BlobComponent from "./components/BlobComponent";
 import NameComponent from "./components/NameComponent";
+import {
+  FaHtml5,
+  FaCss3,
+  FaReact,
+  FaJava,
+  FaLaptopCode,
+  FaFigma,
+  FaMobileAlt,
+  FaDraftingCompass,
+} from "react-icons/fa";
+import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
+import { BsFiletypeSql } from "react-icons/bs";
+import { PiUserFocus } from "react-icons/pi";
+import GridItemComponent from "./components/GridItemComponent";
+import GridComponent from "./components/GridComponent";
 
 function App() {
   return (
@@ -75,18 +91,75 @@ function App() {
             <p className="text-white font-light text-3xl"></p>
           </div>
           <div className="border border-red-500 flex-grow">
-            <h3 className="text-5xl text-white font-medium">Kunskaper</h3>
-            <div className="border border-white grid grid-cols-3 grid-rows-2 gap-4">
-              <div className="bg-white p-4 text-2xl text-bgblue flex-grow">
-                HTML
-              </div>
-              <div className="bg-white p-4 text-2xl text-bgblue flex-grow">
-                CSS
-              </div>
-              <div className="bg-white p-4 text-2xl text-bgblue flex-grow">
-                Tailwind CSS
-              </div>
-            </div>
+            <h3 className="text-5xl text-white font-medium mb-2">Kunskaper</h3>
+            <h3 className="text-4xl text-white font-medium">Frontend</h3>
+            <GridComponent>
+              <GridItemComponent icon={FaHtml5} text="HTML"></GridItemComponent>
+              <GridItemComponent icon={FaCss3} text="CSS"></GridItemComponent>
+              <GridItemComponent
+                icon={RiTailwindCssFill}
+                text="Tailwind CSS"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={RiJavascriptFill}
+                text="JavaScript"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={BiLogoTypescript}
+                text="TypeScript"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaReact}
+                text="React"
+              ></GridItemComponent>
+            </GridComponent>
+            <h3 className="text-4xl text-white font-medium">Backend</h3>
+            <GridComponent>
+              <GridItemComponent
+                icon={FaLaptopCode}
+                text="C"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaLaptopCode}
+                text="C#"
+              ></GridItemComponent>
+              <GridItemComponent icon={FaJava} text="Java"></GridItemComponent>
+              <GridItemComponent
+                icon={BsFiletypeSql}
+                text="SQL"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaLaptopCode}
+                text=".NET CORE"
+              ></GridItemComponent>
+            </GridComponent>
+            <h3 className="text-4xl text-white font-medium">UX Design</h3>
+            <GridComponent>
+              <GridItemComponent
+                icon={FaFigma}
+                text="Figma"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={PiUserFocus}
+                text="Användartest"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaMobileAlt}
+                text="Responsiv"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaDraftingCompass}
+                text="Prototyping"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaDraftingCompass}
+                text="Prototyping"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaDraftingCompass}
+                text="Prototyping"
+              ></GridItemComponent>
+            </GridComponent>
           </div>
         </div>
       </div>
