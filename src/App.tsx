@@ -93,6 +93,7 @@ function App() {
           <div className="border border-red-500 flex-grow">
             <h3 className="text-5xl text-white font-medium mb-2">Kunskaper</h3>
             <h3 className="text-4xl text-white font-medium">Frontend</h3>
+            {/**GÖR OM KOMPONENTEN TILL EN RAD MED FLEX ISTÄLLET */}
             <GridComponent>
               <GridItemComponent icon={FaHtml5} text="HTML"></GridItemComponent>
               <GridItemComponent icon={FaCss3} text="CSS"></GridItemComponent>
@@ -100,6 +101,8 @@ function App() {
                 icon={RiTailwindCssFill}
                 text="Tailwind CSS"
               ></GridItemComponent>
+            </GridComponent>
+            <GridComponent>
               <GridItemComponent
                 icon={RiJavascriptFill}
                 text="JavaScript"
@@ -124,6 +127,8 @@ function App() {
                 text="C#"
               ></GridItemComponent>
               <GridItemComponent icon={FaJava} text="Java"></GridItemComponent>
+            </GridComponent>
+            <GridComponent>
               <GridItemComponent
                 icon={BsFiletypeSql}
                 text="SQL"
@@ -147,6 +152,8 @@ function App() {
                 icon={FaMobileAlt}
                 text="Responsiv"
               ></GridItemComponent>
+            </GridComponent>
+            <GridComponent>
               <GridItemComponent
                 icon={FaDraftingCompass}
                 text="Prototyping"
