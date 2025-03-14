@@ -14,9 +14,11 @@ import {
   FaDraftingCompass,
 } from "react-icons/fa";
 import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
+import { SiMiro } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
 import { PiUserFocus } from "react-icons/pi";
+import { FaDiamond } from "react-icons/fa6";
 import GridItemComponent from "./components/GridItemComponent";
 import GridComponent from "./components/GridComponent";
 
@@ -92,7 +94,7 @@ function App() {
           </div>
           <div className="border border-red-500 flex-grow">
             <h3 className="text-5xl text-white font-medium mb-2">Kunskaper</h3>
-            <h3 className="text-4xl text-white font-medium">Frontend</h3>
+            <h3 className="text-4xl text-white font-medium mb-2">Frontend</h3>
             {/**GÖR OM KOMPONENTEN TILL EN RAD MED FLEX ISTÄLLET */}
             <GridComponent>
               <GridItemComponent icon={FaHtml5} text="HTML"></GridItemComponent>
@@ -116,7 +118,7 @@ function App() {
                 text="React"
               ></GridItemComponent>
             </GridComponent>
-            <h3 className="text-4xl text-white font-medium">Backend</h3>
+            <h3 className="text-4xl text-white font-medium mb-2">Backend</h3>
             <GridComponent>
               <GridItemComponent
                 icon={FaLaptopCode}
@@ -127,44 +129,47 @@ function App() {
                 text="C#"
               ></GridItemComponent>
               <GridItemComponent icon={FaJava} text="Java"></GridItemComponent>
-            </GridComponent>
-            <GridComponent>
               <GridItemComponent
                 icon={BsFiletypeSql}
                 text="SQL"
               ></GridItemComponent>
+            </GridComponent>
+            <GridComponent>
               <GridItemComponent
                 icon={FaLaptopCode}
-                text=".NET CORE"
+                text="ASP .NET CORE"
               ></GridItemComponent>
             </GridComponent>
-            <h3 className="text-4xl text-white font-medium">UX Design</h3>
+            <h3 className="text-4xl text-white font-medium mb-2">UX Design</h3>
+            <GridComponent>
+              <GridItemComponent
+                icon={PiUserFocus}
+                text="Användartestning"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaDiamond}
+                text="Double Diamond"
+              ></GridItemComponent>
+            </GridComponent>
+            <GridComponent>
+              <GridItemComponent
+                icon={FaDraftingCompass}
+                text="Prototyping"
+              ></GridItemComponent>
+              <GridItemComponent
+                icon={FaMobileAlt}
+                text="Responsiv Design"
+              ></GridItemComponent>
+            </GridComponent>
             <GridComponent>
               <GridItemComponent
                 icon={FaFigma}
                 text="Figma"
               ></GridItemComponent>
-              <GridItemComponent
-                icon={PiUserFocus}
-                text="Användartest"
-              ></GridItemComponent>
+              <GridItemComponent icon={SiMiro} text="Miro"></GridItemComponent>
               <GridItemComponent
                 icon={FaMobileAlt}
-                text="Responsiv"
-              ></GridItemComponent>
-            </GridComponent>
-            <GridComponent>
-              <GridItemComponent
-                icon={FaDraftingCompass}
-                text="Prototyping"
-              ></GridItemComponent>
-              <GridItemComponent
-                icon={FaDraftingCompass}
-                text="Prototyping"
-              ></GridItemComponent>
-              <GridItemComponent
-                icon={FaDraftingCompass}
-                text="Prototyping"
+                text="UI Design"
               ></GridItemComponent>
             </GridComponent>
           </div>
