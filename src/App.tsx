@@ -3,6 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import "./App.css";
 import BlobComponent from "./components/BlobComponent";
 import NameComponent from "./components/NameComponent";
+import CategoryComponent from "./components/CategoryComponent";
 import {
   FaHtml5,
   FaCss3,
@@ -25,6 +26,12 @@ import GridComponent from "./components/GridComponent";
   /**Kika in GSap, schyssta animationer för javascript */
 }
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const handleClick = (category: string) => {
+    console.log(`Clicked: ${category}`);
+    setSelectedCategory(category); // Trigger re-render
+  };
   return (
     <>
       <div className="h-screen w-screen bg-bgblue font-display">
@@ -56,36 +63,18 @@ function App() {
         <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-start pt-12 bg-bgblue font-display border-2 border-cyan-400">
           <h3 className="text-5xl text-white font-medium">MINA PROJEKT</h3>
           <div className="w-full flex-grow flex flex-row items-center justify-between px-32">
-            <div className=" relative flex flex-col items-center">
-              <BlobComponent
-                width={304}
-                height={314}
-                className="hover:motion-preset-seesaw-sm"
-              />
-              <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-bgblue text-4xl font-medium">
-                UX Design
-              </span>
-            </div>
-            <div className=" relative flex flex-col items-center">
-              <BlobComponent
-                width={304}
-                height={314}
-                className="hover:motion-preset-seesaw-sm"
-              />
-              <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-bgblue text-4xl font-medium">
-                Webb
-              </span>
-            </div>
-            <div className=" relative flex flex-col items-center">
-              <BlobComponent
-                width={304}
-                height={314}
-                className="hover:motion-preset-seesaw-sm"
-              />
-              <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-bgblue text-4xl font-medium">
-                Mjukvara
-              </span>
-            </div>
+            <CategoryComponent
+              text="UX Design"
+              onClick={() => handleClick("UX Design")}
+            />
+            <CategoryComponent
+              text="Webb"
+              onClick={() => handleClick("Webb")}
+            />
+            <CategoryComponent
+              text="Mjukvara"
+              onClick={() => handleClick("Mjukvara")}
+            />
           </div>
         </div>
         <div className="h-[calc(100vh-8rem)] flex flex-row items-center justify-between pt-12 bg-bgblue font-display border-2 border-green-400">
