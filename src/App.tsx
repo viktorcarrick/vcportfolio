@@ -21,7 +21,9 @@ import { PiUserFocus } from "react-icons/pi";
 import { FaDiamond } from "react-icons/fa6";
 import GridItemComponent from "./components/GridItemComponent";
 import GridComponent from "./components/GridComponent";
-
+{
+  /**Kika in GSap, schyssta animationer för javascript */
+}
 function App() {
   return (
     <>
