@@ -4,6 +4,9 @@ import "./App.css";
 import BlobComponent from "./components/BlobComponent";
 import NameComponent from "./components/NameComponent";
 import CategoryComponent from "./components/CategoryComponent";
+import GridItemComponent from "./components/GridItemComponent";
+import GridComponent from "./components/GridComponent";
+import CardComponent from "./components/CardComponent";
 import {
   FaHtml5,
   FaCss3,
@@ -20,8 +23,7 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
 import { PiUserFocus } from "react-icons/pi";
 import { FaDiamond } from "react-icons/fa6";
-import GridItemComponent from "./components/GridItemComponent";
-import GridComponent from "./components/GridComponent";
+import { IoMdArrowRoundBack } from "react-icons/io";
 {
   /**Kika in GSap, schyssta animationer för javascript */
 }
@@ -61,21 +63,61 @@ function App() {
           </div>
         </div>
         <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-start pt-12 bg-bgblue font-display border-2 border-cyan-400">
-          <h3 className="text-5xl text-white font-medium">MINA PROJEKT</h3>
-          <div className="w-full flex-grow flex flex-row items-center justify-between px-32">
-            <CategoryComponent
-              text="UX Design"
-              onClick={() => handleClick("UX Design")}
-            />
-            <CategoryComponent
-              text="Webb"
-              onClick={() => handleClick("Webb")}
-            />
-            <CategoryComponent
-              text="Mjukvara"
-              onClick={() => handleClick("Mjukvara")}
-            />
-          </div>
+          {(selectedCategory === null || selectedCategory === "") && (
+            <>
+              <h3 className="text-5xl text-white font-medium">MINA PROJEKT</h3>
+              <div className="w-full flex-grow flex flex-row items-center justify-between px-32 motion-preset-shrink">
+                <CategoryComponent
+                  text="UX Design"
+                  onClick={() => handleClick("UX Design")}
+                />
+                <CategoryComponent
+                  text="Webb"
+                  onClick={() => handleClick("Webb")}
+                />
+                <CategoryComponent
+                  text="Mjukvara"
+                  onClick={() => handleClick("Mjukvara")}
+                />
+              </div>
+            </>
+          )}
+          {/* Conditionally Render Content */}
+          {selectedCategory === "UX Design" && (
+            <>
+              <h3 className="text-5xl text-white font-medium">UX Design</h3>
+              <div className="flex flex-row justify-evenly w-full mb-16 mt-16">
+                <CardComponent title="Titel 1"></CardComponent>
+                <CardComponent title="Titel 1"></CardComponent>
+                <CardComponent title="Titel 1"></CardComponent>
+              </div>
+              <button onClick={() => handleClick("")}>Tillbaka</button>
+            </>
+          )}
+          {selectedCategory === "Webb" && (
+            <>
+              <h3 className="text-5xl text-white font-medium">
+                Webbutveckling
+              </h3>
+              <div className="flex flex-row justify-evenly w-full mb-16 mt-16">
+                <CardComponent title="Titel 1"></CardComponent>
+                <CardComponent title="Titel 1"></CardComponent>
+                <CardComponent title="Titel 1"></CardComponent>
+              </div>
+              <button onClick={() => handleClick("")}>Tillbaka</button>
+            </>
+          )}
+          {selectedCategory === "Mjukvara" && (
+            <>
+              <h3 className="text-5xl text-white font-medium">Mjukvara</h3>
+              <div className="flex flex-row justify-evenly w-full mb-16 mt-16">
+                <CardComponent title="Titel 1"></CardComponent>
+                <CardComponent title="Titel 1"></CardComponent>
+                <CardComponent title="Titel 1"></CardComponent>
+              </div>
+              <button onClick={() => handleClick("")}>Tillbaka</button>
+            </>
+          )}
         </div>
         <div className="h-[calc(100vh-8rem)] flex flex-row items-center justify-between pt-12 bg-bgblue font-display border-2 border-green-400">
           <div className="border border-red-500 flex-grow flex flex-row">
