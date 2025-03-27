@@ -119,13 +119,23 @@ function App() {
             </>
           )}
         </div>
-        <div className="h-[calc(100vh-8rem)] flex flex-row items-center justify-between pt-12 bg-bgblue font-display border-2 border-green-400">
-          <div className="border border-red-500 flex-grow flex flex-row">
+        <div className="h-[calc(100vh-8rem)] flex flex-row items-start justify-between gap-x-20 pt-12 bg-bgblue font-display border-2 border-green-400 p-8">
+          <div className="border border-red-500 flex-grow flex flex-row mt-12">
             <BlobComponent width={304} height={314} className="" />
-            <h3 className="text-5xl text-white font-medium">Lite om mig!</h3>
-            <p className="text-white font-light text-3xl"></p>
+            <div className=" ml-4 justify-center flex flex-col w-3/4">
+              <h3 className="text-5xl text-white font-medium mb-2">
+                Lite om mig!
+              </h3>
+              <p className="text-white font-light text-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                in dui mauris. Vivamus hendrerit arcu sed erat molestie
+                vehiculare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat
+                molestie vehiculare.
+              </p>
+            </div>
           </div>
-          <div className="border border-red-500 flex-grow">
+          <div className="border border-red-500 flex-grow mt-12">
             <h3 className="text-5xl text-white font-medium mb-2">Kunskaper</h3>
             <h3 className="text-3xl text-white font-medium mb-2">Frontend</h3>
             {/**GÖR OM KOMPONENTEN TILL EN RAD MED FLEX ISTÄLLET */}
@@ -207,6 +217,9 @@ function App() {
             </GridComponent>
           </div>
         </div>
+        <footer className="w-full min-h-[80px] bg-footerblue text-white flex justify-center items-center">
+          © 2025 Viktor Carrick
+        </footer>
       </div>
     </>
   );
