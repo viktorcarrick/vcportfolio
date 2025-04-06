@@ -24,6 +24,7 @@ import { BsFiletypeSql } from "react-icons/bs";
 import { PiUserFocus } from "react-icons/pi";
 import { FaDiamond } from "react-icons/fa6";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import CardList from "./components/CardList";
 {
   /**Kika in GSap, schyssta animationer för javascript */
 }
@@ -86,11 +87,11 @@ function App() {
           {selectedCategory === "UX Design" && (
             <>
               <h3 className="text-5xl text-white font-medium">UX Design</h3>
-              <div className="flex flex-row justify-evenly w-full mb-16 mt-16">
-                <CardComponent title="Titel 1"></CardComponent>
-                <CardComponent title="Titel 1"></CardComponent>
-                <CardComponent title="Titel 1"></CardComponent>
-              </div>
+              <CardList
+                title1="Titel 1"
+                title2="Titel 2"
+                title3="Title 3"
+              ></CardList>
               <button onClick={() => handleClick("")}>Tillbaka</button>
             </>
           )}
@@ -99,22 +100,22 @@ function App() {
               <h3 className="text-5xl text-white font-medium">
                 Webbutveckling
               </h3>
-              <div className="flex flex-row justify-evenly w-full mb-16 mt-16">
-                <CardComponent title="Titel 1"></CardComponent>
-                <CardComponent title="Titel 1"></CardComponent>
-                <CardComponent title="Titel 1"></CardComponent>
-              </div>
+              <CardList
+                title1="Titel 1"
+                title2="Titel 2"
+                title3="Title 3"
+              ></CardList>
               <button onClick={() => handleClick("")}>Tillbaka</button>
             </>
           )}
           {selectedCategory === "Mjukvara" && (
             <>
               <h3 className="text-5xl text-white font-medium">Mjukvara</h3>
-              <div className="flex flex-row justify-evenly w-full mb-16 mt-16">
-                <CardComponent title="Titel 1"></CardComponent>
-                <CardComponent title="Titel 1"></CardComponent>
-                <CardComponent title="Titel 1"></CardComponent>
-              </div>
+              <CardList
+                title1="Titel 1"
+                title2="Titel 2"
+                title3="Title 3"
+              ></CardList>
               <button onClick={() => handleClick("")}>Tillbaka</button>
             </>
           )}
