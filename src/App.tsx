@@ -23,7 +23,6 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
 import { PiUserFocus } from "react-icons/pi";
 import { FaDiamond } from "react-icons/fa6";
-import { IoMdArrowRoundBack } from "react-icons/io";
 import CardList from "./components/CardList";
 {
   /**Kika in GSap, schyssta animationer för javascript */
@@ -37,12 +36,12 @@ function App() {
   };
   return (
     <>
-      <div className="h-screen w-screen bg-bgblue font-display">
-        <div className="w-screen h-32 bg-bgblue  border border-red-600 flex flex-row font-medium fixed top-0 left-0 z-50">
-          <div className="border border-green-600 flex-grow text-white text-2xl flex justify-start items-center pt-4">
+      <div className="h-screen w-max-screen bg-bgblue font-display">
+        <div className="w-screen h-32 bg-bgblue  flex flex-row font-medium fixed top-0 left-0 z-50">
+          <div className="flex-grow text-white text-2xl flex justify-start items-center pt-4">
             <h3 className="pl-4">VIKTOR CARRICK</h3>
           </div>
-          <div className="border border-green-400 flex-grow-0 grid grid-cols-3 gap-24 place-items-center text-white text-2xl pr-24 pt-4">
+          <div className=" flex-grow-0 grid grid-cols-3 gap-24 place-items-center text-white text-2xl pr-24 pt-4">
             <h3 className="">OM MIG</h3>
             <h3 className="">PORTFOLIO</h3>
             <h3 className="">KONTAKT</h3>
@@ -63,7 +62,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-start pt-12 bg-bgblue font-display border-2 border-cyan-400">
+        <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-center pt-12 bg-bgblue font-display">
           {(selectedCategory === null || selectedCategory === "") && (
             <>
               <h3 className="text-5xl text-white font-medium">MINA PROJEKT</h3>
@@ -120,7 +119,7 @@ function App() {
             </>
           )}
         </div>
-        <div className="h-[calc(100vh-8rem)] flex flex-row items-start justify-between gap-x-20 pt-12 bg-bgblue font-display border-2 border-green-400 p-8">
+        <div className="h-[calc(100vh-8rem)] flex flex-row items-start justify-between gap-x-20 pt-12 bg-bgblue font-display  p-8">
           <div className="border border-red-500 flex-grow flex flex-row mt-12">
             <BlobComponent width={304} height={314} className="" />
             <div className=" ml-4 justify-center flex flex-col w-3/4">
