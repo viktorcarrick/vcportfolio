@@ -83,7 +83,7 @@ function App() {
               </div>
             </>
           )}
-          {/* Conditionally Render Content */}
+          {/* Conditionally Render Content, TODO:centrera korten, dom är ej i mitten vertikalt*/}
           {selectedCategory === "UX Design" && (
             <>
               <h3 className="text-5xl text-white font-medium">UX Design</h3>
