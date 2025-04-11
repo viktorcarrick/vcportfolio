@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import CardComponent from "./CardComponent";
+import type { Card } from "/Users/viktorcarrick/Documents/GitHub/vcportfolio/src/types/Card.tsx";
 interface CardListProps {
-  title1: string;
-  title2: string;
-  title3: string;
+  card1: Card;
+  card2: Card;
+  card3: Card;
 }
-const CardList: React.FC<CardListProps> = ({ title1, title2, title3 }) => {
+const CardList: React.FC<CardListProps> = ({ card1, card2, card3 }) => {
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
-  const cards = [title1, title2, title3];
+  const cards = [card1, card2, card3];
+  const selectedCardData = cards.find((card) => card.title === selectedCard);
+  console.log("Card 1 desc:", card1.description);
+  console.log("Card 2 imagepath:", card2.imagePath);
+  console.log("Card 3:", card3);
 
   return (
     <div className="flex flex-row justify-evenly w-full mb-16 mt-16">
@@ -15,14 +20,18 @@ const CardList: React.FC<CardListProps> = ({ title1, title2, title3 }) => {
         <CardComponent
           key={selectedCard}
           title={selectedCard}
+          description={selectedCardData?.description || ""}
+          imagePath={selectedCardData?.imagePath || "no img found"}
           selectedCard={selectedCard}
           setSelectedCard={setSelectedCard}
         />
       ) : (
-        cards.map((title) => (
+        cards.map(({ title, description, imagePath }) => (
           <CardComponent
             key={title}
             title={title}
+            description={description}
+            imagePath={imagePath}
             selectedCard={selectedCard}
             setSelectedCard={setSelectedCard}
           />

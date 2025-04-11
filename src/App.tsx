@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { TypeAnimation } from "react-type-animation";
 import "./App.css";
 import BlobComponent from "./components/BlobComponent";
 import NameComponent from "./components/NameComponent";
 import CategoryComponent from "./components/CategoryComponent";
 import GridItemComponent from "./components/GridItemComponent";
 import GridComponent from "./components/GridComponent";
-import CardComponent from "./components/CardComponent";
 import {
   FaHtml5,
   FaCss3,
@@ -87,9 +85,22 @@ function App() {
             <>
               <h3 className="text-5xl text-white font-medium">UX Design</h3>
               <CardList
-                title1="Titel 1"
-                title2="Titel 2"
-                title3="Title 3"
+                card1={{
+                  title: "Routeplanner",
+                  description:
+                    "Gränssnitt för navigering och laddning av elbilar, designat med Figma",
+                  imagePath: "src/images/routeplanner-mobilez.png",
+                }}
+                card2={{
+                  title: "Titel 2",
+                  description: "Beskrivning 123 här är lite mer",
+                  imagePath: "",
+                }}
+                card3={{
+                  title: "Titel 3",
+                  description: "Beskrivning 123 här är lite mer och änny mer",
+                  imagePath: "",
+                }}
               ></CardList>
               <button onClick={() => handleClick("")}>Tillbaka</button>
             </>
@@ -100,9 +111,22 @@ function App() {
                 Webbutveckling
               </h3>
               <CardList
-                title1="Titel 1"
-                title2="Titel 2"
-                title3="Title 3"
+                card1={{
+                  title: "Fiskeproggen",
+                  description:
+                    "Webbapp för att planera sitt fiske efter väder! Byggd med React och Tailwind CSS",
+                  imagePath: "src/images/mockup_fiskeproggen.png",
+                }}
+                card2={{
+                  title: "Titel 2",
+                  description: "Beskrivning 123 här är lite mer",
+                  imagePath: "",
+                }}
+                card3={{
+                  title: "Titel 3",
+                  description: "Beskrivning 123 här är lite mer och änny mer",
+                  imagePath: "",
+                }}
               ></CardList>
               <button onClick={() => handleClick("")}>Tillbaka</button>
             </>
@@ -111,9 +135,21 @@ function App() {
             <>
               <h3 className="text-5xl text-white font-medium">Mjukvara</h3>
               <CardList
-                title1="Titel 1"
-                title2="Titel 2"
-                title3="Title 3"
+                card1={{
+                  title: "Titel 1",
+                  description: "Beskrivning 123",
+                  imagePath: "",
+                }}
+                card2={{
+                  title: "Titel 2",
+                  description: "Beskrivning 123 här är lite mer",
+                  imagePath: "",
+                }}
+                card3={{
+                  title: "Titel 3",
+                  description: "Beskrivning 123 här är lite mer och änny mer",
+                  imagePath: "",
+                }}
               ></CardList>
               <button onClick={() => handleClick("")}>Tillbaka</button>
             </>
