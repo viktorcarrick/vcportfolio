@@ -5,6 +5,7 @@ import NameComponent from "./components/NameComponent";
 import CategoryComponent from "./components/CategoryComponent";
 import GridItemComponent from "./components/GridItemComponent";
 import GridComponent from "./components/GridComponent";
+import LinkIcon from "./components/LinkIconComponent";
 import {
   FaHtml5,
   FaCss3,
@@ -22,6 +23,7 @@ import { BsFiletypeSql } from "react-icons/bs";
 import { PiUserFocus } from "react-icons/pi";
 import { FaDiamond } from "react-icons/fa6";
 import CardList from "./components/CardList";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 {
   /**Kika in GSap, schyssta animationer för javascript */
 }
@@ -32,6 +34,14 @@ function App() {
     console.log(`Clicked: ${category}`);
     setSelectedCategory(category); // Trigger re-render
   };
+  /**Function that opens a new window to LinkedIn */
+  const toLinkOne = () => {
+    window.open("https://www.linkedin.com/in/viktor-carrick-073721259/");
+  };
+  const toLinkTwo = () => {
+    window.open("https://github.com/viktorcarrick");
+  };
+
   return (
     <>
       <div className="h-screen w-max-screen bg-bgblue font-display">
@@ -118,12 +128,12 @@ function App() {
                   imagePath: "src/images/mockup_fiskeproggen.png",
                 }}
                 card2={{
-                  title: "Titel 2",
+                  title: "Sketch'n'Guess",
                   description: "Beskrivning 123 här är lite mer",
                   imagePath: "",
                 }}
                 card3={{
-                  title: "Titel 3",
+                  title: "Något mer",
                   description: "Beskrivning 123 här är lite mer och änny mer",
                   imagePath: "",
                 }}
@@ -169,6 +179,10 @@ function App() {
                 elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat
                 molestie vehiculare.
               </p>
+              <div className="flex flex-row mt-2 gap-2">
+                <LinkIcon icon={FaLinkedin} onClick={toLinkOne}></LinkIcon>
+                <LinkIcon icon={FaGithub} onClick={toLinkTwo}></LinkIcon>
+              </div>
             </div>
           </div>
           <div className="border border-red-500 flex-grow mt-12">
